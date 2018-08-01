@@ -31,7 +31,7 @@ public class EmServiceImpl implements IEmService {
     public User add() {
         User user = new User();
         user.setId("1");
-        user.setName("qianran");
+        user.setName("中国一定是天下的武昌无常一定会呵呵");
         user.setLastname("java");
         user.setAge(21);
         userRepository.save(user);
@@ -54,7 +54,7 @@ public class EmServiceImpl implements IEmService {
         BoolQueryBuilder builder = QueryBuilders.boolQuery();
         //builder下有must、should以及mustNot 相当于sql中的and、or以及not
         //设置模糊搜索
-        builder.must(QueryBuilders.fuzzyQuery("name", "qianran"));
+        builder.must(QueryBuilders.fuzzyQuery("name", "linjie"));
         //设置lastName是zh(精确查询)
         builder.must(new QueryStringQueryBuilder("java").field("lastname"));
 

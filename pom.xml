@@ -49,6 +49,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--&lt;!&ndash;MyPerf4J&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>MyPerf4J</groupId>-->
+            <!--<artifactId>MyPerf4J-Extension</artifactId>-->
+            <!--<version>${MyPerf4J-version}</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash;logback日志工具&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-classic</artifactId>-->
+            <!--<version>${logback-classic-version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
