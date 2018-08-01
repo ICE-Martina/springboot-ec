@@ -14,6 +14,8 @@ public class User {
     @Field
     private String name;
     @Field
+    private String lastname;
+    @Field
     private Integer age = 0;
 
     /**
@@ -44,6 +46,14 @@ public class User {
         this.age = age;
     }
 
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     /**
      * 重写toString
      * @return
@@ -53,6 +63,7 @@ public class User {
         return "User{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
                 ", age=" + age +
                 '}';
     }

@@ -30,9 +30,10 @@ public class EmServiceImpl implements IEmService {
     @Override
     public User add() {
         User user = new User();
-        user.setId("3");
-        user.setName("linjie");
-        user.setAge(20);
+        user.setId("1");
+        user.setName("qianran");
+        user.setLastname("java");
+        user.setAge(21);
         userRepository.save(user);
         System.err.println("add a obj");
         return user;
@@ -53,9 +54,9 @@ public class EmServiceImpl implements IEmService {
         BoolQueryBuilder builder = QueryBuilders.boolQuery();
         //builder下有must、should以及mustNot 相当于sql中的and、or以及not
         //设置模糊搜索
-        builder.must(QueryBuilders.fuzzyQuery("name", "xuxu"));
+        builder.must(QueryBuilders.fuzzyQuery("name", "qianran"));
         //设置lastName是zh(精确查询)
-        builder.must(new QueryStringQueryBuilder("zh").field("lastName"));
+        builder.must(new QueryStringQueryBuilder("java").field("lastname"));
 
         //按照年龄从高到低
         FieldSortBuilder sort = SortBuilders.fieldSort("age").order(SortOrder.DESC);
@@ -86,6 +87,7 @@ public class EmServiceImpl implements IEmService {
 
         //打印总条数看一下了
         System.out.println(total);
+        System.out.println(content);
         return content;
     }
     /**
