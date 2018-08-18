@@ -54,7 +54,10 @@ public class EmServiceImpl implements IEmService {
         BoolQueryBuilder builder = QueryBuilders.boolQuery();
         //builder下有must、should以及mustNot 相当于sql中的and、or以及not
         //设置模糊搜索
-        builder.must(QueryBuilders.fuzzyQuery("name", "linjie"));
+        //builder.must(QueryBuilders.fuzzyQuery("name", "中国"));
+        for(User user :userRepository.findByNameLike("中国")){
+            System.out.println(user);
+        }
         //设置lastName是zh(精确查询)
         builder.must(new QueryStringQueryBuilder("java").field("lastname"));
 

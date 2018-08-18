@@ -12,7 +12,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 //replicas:每个分区默认的备份数
 //refreshInterval:刷新间隔
 //shards:默认分区数
-@Document(indexName = "address",type = "user", shards = 1,replicas = 0, refreshInterval = "-1")
+@Document(indexName = "add",type = "user", shards = 1,replicas = 0, refreshInterval = "-1")
 public class User {
     @Id
     private String id;          //标识
