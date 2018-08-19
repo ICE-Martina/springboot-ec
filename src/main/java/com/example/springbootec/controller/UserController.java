@@ -64,4 +64,10 @@ public class UserController {
         List<User> userList = emService.select();
         return userList;
     }
+
+    @RequestMapping("/select_one")
+    public User select_one(){
+        User user = emService.select_one();
+        return user;
+    }
 }

@@ -28,4 +28,11 @@ public interface UserRepository extends ElasticsearchRepository<User,String> {
      * @return
      */
     public List<User> findByNameLike(String name);
+
+    /**
+     * 精确查询
+     * @param name
+     * @return
+     */
+    public User findByName(String name);
 }

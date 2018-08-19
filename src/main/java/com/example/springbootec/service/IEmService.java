@@ -37,4 +37,10 @@ public interface IEmService {
      * @Date: 下午 17:20 2018/7/31 0031
      */
     String delete();
+
+    /**
+     * 精确
+     * @return
+     */
+    User select_one();
 }
